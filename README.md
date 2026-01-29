@@ -42,5 +42,6 @@ SET outRef.Address = COALESCE(inRef.addressLine1,'')||' '
      ||COALESCE(inRef.addressLine4,'');
 ```
 
+CASTING: to convert one data type to another. 
 
 
