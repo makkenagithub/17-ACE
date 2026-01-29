@@ -24,4 +24,23 @@ There are 4 ways we can deploy an application into ACE node /  standlone integra
 4. drag and drop application bar file in ace toolkit
 
 
+## ESQL
+https://www.notion.so/IBM-ACE13-1a29b46d6a2c8030bd38da3241c93a14
+
+
+Concatination: we concatinate using || symbol. If we concatinate anything with 'null', entire expression becomes null.
+
+COALESCE function checks the not null value in the expressions passed and return first not null value.
+
+COALESCE(Expression1, Expression2, ..., ExpressionN)
+
+We can use COALESCE function to provide default value to the filed when its null. when the expression is null, as below
+```
+SET outRef.Address = COALESCE(inRef.addressLine1,'')||' '
+     ||COALESCE(inRef.addressLine2,'')||' '
+     ||COALESCE(inRef.addressLine3,'')||' '
+     ||COALESCE(inRef.addressLine4,'');
+```
+
+
 
