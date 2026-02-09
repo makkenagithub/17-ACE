@@ -44,4 +44,22 @@ SET outRef.Address = COALESCE(inRef.addressLine1,'')||' '
 
 CASTING: to convert one data type to another. 
 
+### DB connection to ACE node
+Initially create a data source (DSN) with a name say "DATA_SOURCE_NAME" using ODBC data source administrator tool. Now we have associate this DSN with ACE now using below command
+
+```
+mqsisetdbparms <ACE_NODE> -n <DATA_SOURCE_NAME> -u <DB_user_name> -p <DB_password> 
+```
+<img width="299" height="40" alt="image" src="https://github.com/user-attachments/assets/3411c4eb-6662-4ea9-82ef-3fc4de3c5df5" />
+
+Then check the DB connection
+```
+mqsicvp <ACE_NODE> -n <DATA_SOURCE_NAME>
+```
+<img width="426" height="93" alt="image" src="https://github.com/user-attachments/assets/bb09a7f4-17f2-4a11-b8be-56cd844a4cf2" />
+
+After that RESTART IIB NODE
+
+
+
 
