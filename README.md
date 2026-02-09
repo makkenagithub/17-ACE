@@ -76,3 +76,9 @@ SET sqlQuery = 'SELECT *FROM EMPLOYEE';
 SET DBDetails.results[] = PASSTHRU(sqlQuery);
 SET OutputRoot.JSON.Data.DBdata = DBDetails;
 ```
+### PROPAGATE
+To route the request to another subflow we can use PROPAGATE
+
+<img width="191" height="89" alt="image" src="https://github.com/user-attachments/assets/f2d92070-8ab0-422f-a5a6-dc11c8ea12d0" />
+
+
