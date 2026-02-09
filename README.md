@@ -60,6 +60,10 @@ mqsicvp <ACE_NODE> -n <DATA_SOURCE_NAME>
 
 After that RESTART IIB NODE
 
-
+When we want to update DB through ESQL code, then PASSTHROUGH needs to be used
+```
+PASSTHROUGH(sqlQuery)
+```
+<img width="481" height="47" alt="image" src="https://github.com/user-attachments/assets/a0b0160d-36f4-4c79-b423-aa5502be727e" />
 
 
