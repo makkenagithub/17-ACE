@@ -111,6 +111,17 @@ parse entire message to improve performance. In that case we can use opaque pars
 
 for xml input data, if we know the expected xml input data and its data types, then we can generate validation xsd files from toolkit and use it to validate the message. If any fileds are missed in the input xml data or data types are wrong, then message validation throws exception.
 
+### enableing/disabling user trace
+enable:
+```
+mqsichangetrace ACENode -u -e <IntegrationServername> -l debug
+```
+-u indicates user trace
+
+disable:
+```
+mqsichangetrace ACENode -u -e <IntegrationServername> -l none
+```
 
 
 
