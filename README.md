@@ -131,4 +131,15 @@ We need to restart / reload the integration server after enable/disable
 mqsireload ACENode -e <IntegrationServername> 
 ```
 
+### REST api (web service)
+
+
+### HTTPRequestNode
+HTTPRequestNode is used to make a call to webservice
+
+
+
+
+
+
 
