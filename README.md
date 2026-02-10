@@ -135,7 +135,7 @@ mqsireload ACENode -e <IntegrationServername>
 
 
 ### HTTPRequestNode
-HTTPRequestNode is used to make a call to webservice
+HTTPRequestNode is used to make a call to webservice(or a REST api)
 
 
 
