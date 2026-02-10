@@ -89,4 +89,24 @@ Eg:
 PATH com.ibm.empdata.sharedlib
 ```
 
+### Query string
+We can pass the query directly in the url itself as http://localhost:7071/emp?id=14  instead of message input body.
+
+So to get this information we can tick mark the query string option in http input node advanced properties. The information of id=14 will come in localEnverronment tree.
+
+### parse timing:
+Ondemand parsing, complete parsing, immediate parsing
+
+### opaque parsing
+<img width="493" height="122" alt="image" src="https://github.com/user-attachments/assets/11050e06-16c2-407b-a1bf-5b8e74097c41" />
+
+opaque parsing works only in XML message
+
+Opaque parsing can be used to select which all items in the xml mesage to not parse. Sometimes, we may have a large xml message, and we donot want to 
+parse entire message to improve performance. In that case we can use opaque parsing , to parse only required part of message. In below case Items is not parsed.
+
+<img width="236" height="95" alt="image" src="https://github.com/user-attachments/assets/1e1544ac-a090-45c0-9331-6128a0ed00d3" />
+
+
+
 
