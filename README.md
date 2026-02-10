@@ -107,6 +107,10 @@ parse entire message to improve performance. In that case we can use opaque pars
 
 <img width="236" height="95" alt="image" src="https://github.com/user-attachments/assets/1e1544ac-a090-45c0-9331-6128a0ed00d3" />
 
+### message validation
+
+for xml input data, if we know the expected xml input data and its data types, then we can generate validation xsd files from toolkit and use it to validate the message. If any fileds are missed in the input xml data or data types are wrong, then message validation throws exception.
+
 
 
 
