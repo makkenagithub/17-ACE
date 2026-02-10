@@ -118,10 +118,17 @@ mqsichangetrace ACENode -u -e <IntegrationServername> -l debug
 ```
 -u indicates user trace
 
+log path is 
+<img width="361" height="239" alt="image" src="https://github.com/user-attachments/assets/08f81f44-5107-48fe-9bcc-56470237e12c" />
+
+
 disable:
 ```
 mqsichangetrace ACENode -u -e <IntegrationServername> -l none
 ```
-
+We need to restart / reload the integration server after enable/disable
+```
+mqsireload ACENode -e <IntegrationServername> 
+```
 
 
