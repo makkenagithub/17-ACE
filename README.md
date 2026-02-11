@@ -137,8 +137,19 @@ mqsireload ACENode -e <IntegrationServername>
 ### HTTPRequestNode
 HTTPRequestNode is used to make a call to webservice(or a REST api)
 
+Flows can ge created multiple ways , an example is 
+
+input -> API1 -> HTTPRequestnode -> API2 -> output 
+
+Here we usually pass an API url to HTTPRequestnode and it calls that API. We can pass url as below
+
+<img width="442" height="70" alt="image" src="https://github.com/user-attachments/assets/8e61af1a-e90f-4a3e-8ea1-b158901551a2" />
 
 
+```
+In API1 we can give output as
+SET OutpurLocalEnvironment.Destination.HTTP.RequestURL = 'http://localhost:7080/pincodeapi/v1/validateapi?pin='||pincode
+```
 
 
 
