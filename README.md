@@ -141,6 +141,8 @@ Flows can ge created multiple ways , an example is
 
 input -> API1 -> HTTPRequestnode -> API2 -> output 
 
+<img width="296" height="100" alt="image" src="https://github.com/user-attachments/assets/51e3ac6c-fdba-418f-9cf7-e2f03157a187" />
+
 Here we usually pass an API url to HTTPRequestnode and it calls that API. We can pass url as below
 
 <img width="442" height="70" alt="image" src="https://github.com/user-attachments/assets/8e61af1a-e90f-4a3e-8ea1-b158901551a2" />
