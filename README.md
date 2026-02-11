@@ -167,5 +167,17 @@ mqsideploy ACENODE -e IntegrationServer -a barfile.bar
 ```
 we can not override to a bar file which already overidden. Means, only once we can override a bar file.
 
+### external variables
+We need to define an external vraible in user defined properties(UDP) in console with some name and its default value. (click on a flow from diagram and see UDP)
+
+In esql flow file , we need to declare the external variable in the esql as below. And we cant modify the external varaible in the esql code.
+```
+DECLARE externalVar EXTERNAL CHAR ''
+```
+External variable can be of any data type except ROW.
+
+How to modify these external variable ?
+We need to create a properties file and in that file we need to provide the values to external variable , and then override the bar file with properties file.
+
 
 
