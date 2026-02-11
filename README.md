@@ -191,5 +191,16 @@ In case of any exception in compute node, we can handle through exception queue.
 When we compare HHTP flow with MQ Flow, MQ flow is asynchronous. HTTP flow is synchronous. HTTP expects response in certain duration i.e. 60 sec or 180 sec. 
 But MQ flow is asynchronous.
 
+### transaction mode property in MQ flow
+Assume we did not handle any exception handler queue as above.
+If we set Transaction mode as "Yes", and if an exception occurs in compute node, then MQ flow looks for backout queue in MQ Input queue, 
+if BOQ is there in message goes to BOQ. 
+If BOQ does not exist, then message goes to dead letter queue when the exception occurs.
+If no BOQ and DLQ, then an infinite loop kind of flow happens between MQ input node and compute node.
+
+If we set Transaction mode as "No", then if there is no unhandled exception, then message will be lost.
+
+If we set Transaction mode as "Automatic", then if the emssage is of persistent or queue property is persistent, 
+then message wont be lost in case unhandled exception. Message exists in MQ input queue.
 
 
