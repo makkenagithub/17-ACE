@@ -153,6 +153,19 @@ In API1 we can give output as
 SET OutpurLocalEnvironment.Destination.HTTP.RequestURL = 'http://localhost:7080/pincodeapi/v1/validateapi?pin='||pincode
 ```
 
+If the requirement is like , multiple flows need to use same HTTP request node , then we can create HTTP request node as shared librarry and use it in all required flows.
+
+### bar file override with proeprties file
+```
+mqsiapplybaroverride -b barfile.bar -p propertiesfile.properties -r
+```
+<img width="364" height="179" alt="image" src="https://github.com/user-attachments/assets/c25d3974-3823-4eb1-a9ab-06533fbfb268" />
+
+command to deploy bar file
+```
+mqsideploy ACENODE -e IntegrationServer -a barfile.bar
+```
+we can not override to a bar file which already overidden. Means, only once we can override a bar file.
 
 
 
