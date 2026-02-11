@@ -179,5 +179,17 @@ External variable can be of any data type except ROW.
 How to modify these external variable ?
 We need to create a properties file and in that file we need to provide the values to external variable , and then override the bar file with properties file.
 
+### MQ flow
+<img width="316" height="88" alt="image" src="https://github.com/user-attachments/assets/4e76ee32-05d2-4982-b441-a78f90d02224" />
+
+In MQ flow we have MQ input node and MQ output node. And inbetween we can have compute node. We give queue names in MQ input and MQ output nodes.
+
+When an application (RFH util) places messages to MQ input node , then messages comes to queue in MQ input node. 
+Then goes to comupte node and then messages placed to MQ output queue in MQ output node. 
+In case of any exception in compute node, we can handle through exception queue. In this case the message in MQ input queue will go to queue in Exception handler.
+
+When we compare HHTP flow with MQ Flow, MQ flow is asynchronous. HTTP flow is synchronous. HTTP expects response in certain duration i.e. 60 sec or 180 sec. 
+But MQ flow is asynchronous.
+
 
 
