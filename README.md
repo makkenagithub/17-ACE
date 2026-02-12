@@ -203,4 +203,21 @@ If we set Transaction mode as "No", then if there is no unhandled exception, the
 If we set Transaction mode as "Automatic", then if the emssage is of persistent or queue property is persistent, 
 then message wont be lost in case unhandled exception. Message exists in MQ input queue.
 
+### MQ reply node
+If we want send reply to the original message which comes, then we need to use the MQ reply node. Every message has message ID and corellation ID. 
+When the reply node sends the response, then the corelation id contains the message id of the message to which its sending reply/response.
+
+In the code we give the queue name for reply queue, as below
+
+<img width="176" height="41" alt="image" src="https://github.com/user-attachments/assets/6a48d21a-37ea-4686-a53f-c7ece5744367" />
+
+### Flow order node:
+
+<img width="335" height="122" alt="image" src="https://github.com/user-attachments/assets/11438509-0710-4e38-8ec0-053dcf352e7f" />
+
+If we want to send the message to MQ output node and also to MQ reply node, we use flow order node. 
+ALso we can achieve this by connecting the compute node output terminals to mq reply node and mq output node.
+So this way we can send reply to original requester and also plcing message to output node.
+
+
 
