@@ -219,5 +219,8 @@ If we want to send the message to MQ output node and also to MQ reply node, we u
 ALso we can achieve this by connecting the compute node output terminals to mq reply node and mq output node.
 So this way we can send reply to original requester and also plcing message to output node.
 
+### Pub sub
+<img width="467" height="132" alt="image" src="https://github.com/user-attachments/assets/077d56ab-e700-43d9-bc82-5065e493d96f" />
+
 
 
