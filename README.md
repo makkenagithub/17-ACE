@@ -222,5 +222,12 @@ So this way we can send reply to original requester and also plcing message to o
 ### Pub sub
 <img width="467" height="132" alt="image" src="https://github.com/user-attachments/assets/077d56ab-e700-43d9-bc82-5065e493d96f" />
 
+In the MQ publiaction node, what ever topic string name, then the messages goto that topic, from ACE to MQ.
+
+### MQ get node
+MQ get node is used to read the message from the queue anywhere in the message flow. 
+Biggest use case is if we want to connect one MQ service to another MQ service then MQ get node is useful.
+
+<img width="335" height="113" alt="image" src="https://github.com/user-attachments/assets/0b243b95-5e93-4646-b168-a111c0c4de3d" />
 
 
